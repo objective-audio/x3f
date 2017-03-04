@@ -11,17 +11,15 @@ import Foundation
 class Data {
     var selectedDirectoryUrl: URL? {
         didSet {
-            if let url = selectedDirectoryUrl {
-                let fileUrls = fileURLs()
-                
-                if fileUrls.count > 0 {
-                    for fileUrl in fileUrls {
-                        self.selectedFileUrl = fileUrl
-                        break
-                    }
-                } else {
-                    self.selectedFileUrl = nil
+            let fileUrls = fileURLs()
+            
+            if fileUrls.count > 0 {
+                for fileUrl in fileUrls {
+                    self.selectedFileUrl = fileUrl
+                    break
                 }
+            } else {
+                self.selectedFileUrl = nil
             }
             
             if let handler = directoryChangeHandler {
