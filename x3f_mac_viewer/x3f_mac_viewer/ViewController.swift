@@ -31,8 +31,16 @@ class ViewController: NSViewController {
         openPanel.allowsMultipleSelection = false;
         
         if openPanel.runModal() == NSFileHandlingPanelOKButton {
-            if let url = openPanel.url {
-                print("open:\(url)")
+            guard let url = openPanel.url else {
+                return
+            }
+            
+            let urlString = url.absoluteString
+            let urlSubstring = urlString.substring(from: urlString.index(urlString.startIndex, offsetBy: 7))
+            let path = urlSubstring.cString(using: .utf8)
+            
+            if let jpgData = load_jpg(path) {
+                self.imageView.image = NSImage(data: jpgData)
             }
         }
     }
