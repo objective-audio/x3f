@@ -13,6 +13,12 @@
 		B65E04571E6A4F0A00DE6357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65E04551E6A4F0A00DE6357 /* Main.storyboard */; };
 		B65E04621E6A4F0B00DE6357 /* x3f_mac_viewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E04611E6A4F0B00DE6357 /* x3f_mac_viewerTests.swift */; };
 		B65E046F1E6A58CD00DE6357 /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B65E046E1E6A58CD00DE6357 /* sample.jpg */; };
+		B65E04A41E6A61D900DE6357 /* x3f_io.c in Sources */ = {isa = PBXBuildFile; fileRef = B65E04831E6A61D900DE6357 /* x3f_io.c */; };
+		B65E04B51E6A635800DE6357 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B65E04B41E6A635800DE6357 /* libiconv.tbd */; };
+		B65E04C01E6A678B00DE6357 /* yas_x3f_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B65E04BE1E6A678B00DE6357 /* yas_x3f_utils.m */; };
+		B65E04C11E6A678B00DE6357 /* yas_x3f_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B65E04BE1E6A678B00DE6357 /* yas_x3f_utils.m */; };
+		B65E04FC1E6A6A1A00DE6357 /* x3f_printf.c in Sources */ = {isa = PBXBuildFile; fileRef = B65E04FA1E6A6A1A00DE6357 /* x3f_printf.c */; };
+		B65E053E1E6A6C9600DE6357 /* x3f_dump.c in Sources */ = {isa = PBXBuildFile; fileRef = B65E053C1E6A6C9600DE6357 /* x3f_dump.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,17 @@
 		B65E04611E6A4F0B00DE6357 /* x3f_mac_viewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x3f_mac_viewerTests.swift; sourceTree = "<group>"; };
 		B65E04631E6A4F0B00DE6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65E046E1E6A58CD00DE6357 /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		B65E04831E6A61D900DE6357 /* x3f_io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x3f_io.c; path = ../../src/x3f_io.c; sourceTree = "<group>"; };
+		B65E04841E6A61D900DE6357 /* x3f_io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x3f_io.h; path = ../../src/x3f_io.h; sourceTree = "<group>"; };
+		B65E04B41E6A635800DE6357 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		B65E04B81E6A659600DE6357 /* x3f_mac_viewer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "x3f_mac_viewer-Bridging-Header.h"; sourceTree = "<group>"; };
+		B65E04B91E6A670E00DE6357 /* x3f_mac_viewerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "x3f_mac_viewerTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B65E04BE1E6A678B00DE6357 /* yas_x3f_utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yas_x3f_utils.m; sourceTree = "<group>"; };
+		B65E04BF1E6A678B00DE6357 /* yas_x3f_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yas_x3f_utils.h; sourceTree = "<group>"; };
+		B65E04FA1E6A6A1A00DE6357 /* x3f_printf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x3f_printf.c; path = ../../src/x3f_printf.c; sourceTree = "<group>"; };
+		B65E04FB1E6A6A1A00DE6357 /* x3f_printf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x3f_printf.h; path = ../../src/x3f_printf.h; sourceTree = "<group>"; };
+		B65E053C1E6A6C9600DE6357 /* x3f_dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x3f_dump.c; path = ../../src/x3f_dump.c; sourceTree = "<group>"; };
+		B65E053D1E6A6C9600DE6357 /* x3f_dump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x3f_dump.h; path = ../../src/x3f_dump.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65E04B51E6A635800DE6357 /* libiconv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +80,7 @@
 				B65E044E1E6A4F0A00DE6357 /* x3f_mac_viewer */,
 				B65E04601E6A4F0B00DE6357 /* x3f_mac_viewerTests */,
 				B65E044D1E6A4F0A00DE6357 /* Products */,
+				B65E04B31E6A635800DE6357 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +96,18 @@
 		B65E044E1E6A4F0A00DE6357 /* x3f_mac_viewer */ = {
 			isa = PBXGroup;
 			children = (
+				B65E04B81E6A659600DE6357 /* x3f_mac_viewer-Bridging-Header.h */,
+				B65E04BE1E6A678B00DE6357 /* yas_x3f_utils.m */,
+				B65E04BF1E6A678B00DE6357 /* yas_x3f_utils.h */,
+				B65E04FD1E6A6ACB00DE6357 /* dummy */,
+				B65E04701E6A61C600DE6357 /* src */,
 				B65E046E1E6A58CD00DE6357 /* sample.jpg */,
 				B65E044F1E6A4F0A00DE6357 /* AppDelegate.swift */,
 				B65E04511E6A4F0A00DE6357 /* ViewController.swift */,
 				B65E04531E6A4F0A00DE6357 /* Assets.xcassets */,
 				B65E04551E6A4F0A00DE6357 /* Main.storyboard */,
 				B65E04581E6A4F0A00DE6357 /* Info.plist */,
+				B65E04B91E6A670E00DE6357 /* x3f_mac_viewerTests-Bridging-Header.h */,
 			);
 			path = x3f_mac_viewer;
 			sourceTree = "<group>";
@@ -94,6 +119,34 @@
 				B65E04631E6A4F0B00DE6357 /* Info.plist */,
 			);
 			path = x3f_mac_viewerTests;
+			sourceTree = "<group>";
+		};
+		B65E04701E6A61C600DE6357 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B65E04831E6A61D900DE6357 /* x3f_io.c */,
+				B65E04841E6A61D900DE6357 /* x3f_io.h */,
+				B65E04FA1E6A6A1A00DE6357 /* x3f_printf.c */,
+				B65E04FB1E6A6A1A00DE6357 /* x3f_printf.h */,
+				B65E053C1E6A6C9600DE6357 /* x3f_dump.c */,
+				B65E053D1E6A6C9600DE6357 /* x3f_dump.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		B65E04B31E6A635800DE6357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B65E04B41E6A635800DE6357 /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B65E04FD1E6A6ACB00DE6357 /* dummy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = dummy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,11 +200,13 @@
 					B65E044B1E6A4F0A00DE6357 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = WVVR5YE53F;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B65E045C1E6A4F0B00DE6357 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = WVVR5YE53F;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B65E044B1E6A4F0A00DE6357;
 					};
@@ -201,8 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65E04FC1E6A6A1A00DE6357 /* x3f_printf.c in Sources */,
+				B65E04A41E6A61D900DE6357 /* x3f_io.c in Sources */,
 				B65E04521E6A4F0A00DE6357 /* ViewController.swift in Sources */,
+				B65E053E1E6A6C9600DE6357 /* x3f_dump.c in Sources */,
 				B65E04501E6A4F0A00DE6357 /* AppDelegate.swift in Sources */,
+				B65E04C01E6A678B00DE6357 /* yas_x3f_utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65E04621E6A4F0B00DE6357 /* x3f_mac_viewerTests.swift in Sources */,
+				B65E04C11E6A678B00DE6357 /* yas_x3f_utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,12 +390,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVVR5YE53F;
 				INFOPLIST_FILE = x3f_mac_viewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.objective-audio.x3f-mac-viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "x3f_mac_viewer/x3f_mac_viewer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -344,12 +407,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVVR5YE53F;
 				INFOPLIST_FILE = x3f_mac_viewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.objective-audio.x3f-mac-viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "x3f_mac_viewer/x3f_mac_viewer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -359,12 +424,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVVR5YE53F;
 				INFOPLIST_FILE = x3f_mac_viewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.objective-audio.x3f-mac-viewerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "x3f_mac_viewer/x3f_mac_viewerTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/x3f_mac_viewer.app/Contents/MacOS/x3f_mac_viewer";
 			};
@@ -375,12 +443,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVVR5YE53F;
 				INFOPLIST_FILE = x3f_mac_viewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.objective-audio.x3f-mac-viewerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "x3f_mac_viewer/x3f_mac_viewerTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/x3f_mac_viewer.app/Contents/MacOS/x3f_mac_viewer";
 			};
