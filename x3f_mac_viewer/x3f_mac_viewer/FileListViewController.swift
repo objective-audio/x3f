@@ -16,7 +16,9 @@ class FileListViewController: NSViewController {
     override var representedObject: Any? {
         didSet {
             self.data = representedObject as? Data
-            self.updateTableView()
+            self.data?.directoryChangeHandler = { [unowned self] (_: URL?) in
+                self.updateTableView()
+            }
         }
     }
     
