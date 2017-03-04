@@ -12,17 +12,29 @@ class FileListViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     
     var data: Data?
+    var fileURLs: [URL] = []
     
     override var representedObject: Any? {
         didSet {
             self.data = representedObject as? Data
-            self.data?.directoryChangeHandler = { [unowned self] (_: URL?) in
-                self.updateTableView()
+            self.data?.directoryChangeHandler = { [unowned self] (directoryUrl: URL?) in
+                self.fileURLs = self.data?.fileURLs() ?? []
+                self.tableView.reloadData()
             }
         }
     }
+}
+
+extension FileListViewController: NSTableViewDelegate {
     
-    func updateTableView() {
-        
+}
+
+extension FileListViewController: NSTableViewDataSource {
+    public func numberOfRows(in tableView: NSTableView) -> Int {
+        return self.fileURLs.count
+    }
+    
+    public func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        return "\(row)"
     }
 }

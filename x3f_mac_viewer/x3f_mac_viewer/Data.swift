@@ -12,12 +12,11 @@ class Data {
     var selectedDirectoryUrl: URL? {
         didSet {
             if let url = selectedDirectoryUrl {
-                let fileManager = FileManager.default
-                let urls = try! fileManager.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+                let fileUrls = fileURLs()
                 
-                if urls.count > 0 {
-                    for url in urls {
-                        self.selectedFileUrl = url
+                if fileUrls.count > 0 {
+                    for fileUrl in fileUrls {
+                        self.selectedFileUrl = fileUrl
                         break
                     }
                 } else {
@@ -41,4 +40,12 @@ class Data {
     
     var directoryChangeHandler: ((URL?) -> Void)?
     var fileChangeHandler: ((URL?) -> Void)?
+    
+    func fileURLs() -> [URL] {
+        if let directoryUrl = self.selectedDirectoryUrl {
+            let fileManager = FileManager.default
+            return try! fileManager.contentsOfDirectory(at: directoryUrl, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+        }
+        return []
+    }
 }

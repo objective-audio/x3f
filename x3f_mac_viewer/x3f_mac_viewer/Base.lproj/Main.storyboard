@@ -794,6 +794,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="8U5-cl-kvw" id="aFB-OL-naG"/>
+                                                <outlet property="delegate" destination="8U5-cl-kvw" id="YqB-0V-d9b"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
