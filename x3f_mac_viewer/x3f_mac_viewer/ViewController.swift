@@ -23,8 +23,20 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBAction func open(sender: AnyObject) {
+    @IBAction func open_(sender: AnyObject) {
         self.imageView.image = NSImage(named: "sample")
+    }
+    
+    @IBAction func open(sender: AnyObject) {
+        let openPanel = NSOpenPanel()
+        openPanel.allowedFileTypes = ["x3f"]
+        openPanel.canChooseDirectories = false;
+        openPanel.canChooseFiles = true;
+        openPanel.allowsMultipleSelection = false;
+        
+        if openPanel.runModal() == NSFileHandlingPanelOKButton {
+            print("open:\(openPanel.url)")
+        }
     }
 }
 
