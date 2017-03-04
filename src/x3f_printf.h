@@ -14,7 +14,7 @@
 extern "C" {
 #endif
 
-typedef enum {ERR=0, WARN=1, INFO=2, DEBUG=3} x3f_verbosity_t;
+typedef enum {ERR=0, WARN=1, INFO=2, _DEBUG=3} x3f_verbosity_t;
 
 extern x3f_verbosity_t x3f_printf_level;
 

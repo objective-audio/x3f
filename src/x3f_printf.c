@@ -31,7 +31,7 @@ extern void x3f_printf(x3f_verbosity_t level, const char *fmt, ...)
   case INFO:
     fprintf(f, "   : ");
     break;
-  case DEBUG:
+  case _DEBUG:
     fprintf(f, "dbg: ");
     break;
   }
