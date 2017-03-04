@@ -9,6 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet weak var imageView: NSImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func open(sender: AnyObject) {
+        print("open clicked")
+    }
 }
 
