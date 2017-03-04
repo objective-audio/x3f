@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B65E04501E6A4F0A00DE6357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E044F1E6A4F0A00DE6357 /* AppDelegate.swift */; };
-		B65E04521E6A4F0A00DE6357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E04511E6A4F0A00DE6357 /* ViewController.swift */; };
+		B65E04521E6A4F0A00DE6357 /* ThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E04511E6A4F0A00DE6357 /* ThumbnailViewController.swift */; };
 		B65E04541E6A4F0A00DE6357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65E04531E6A4F0A00DE6357 /* Assets.xcassets */; };
 		B65E04571E6A4F0A00DE6357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65E04551E6A4F0A00DE6357 /* Main.storyboard */; };
 		B65E04621E6A4F0B00DE6357 /* x3f_mac_viewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E04611E6A4F0B00DE6357 /* x3f_mac_viewerTests.swift */; };
@@ -18,6 +18,7 @@
 		B65E04C11E6A678B00DE6357 /* yas_x3f_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B65E04BE1E6A678B00DE6357 /* yas_x3f_utils.m */; };
 		B65E04FC1E6A6A1A00DE6357 /* x3f_printf.c in Sources */ = {isa = PBXBuildFile; fileRef = B65E04FA1E6A6A1A00DE6357 /* x3f_printf.c */; };
 		B65E053E1E6A6C9600DE6357 /* x3f_dump.c in Sources */ = {isa = PBXBuildFile; fileRef = B65E053C1E6A6C9600DE6357 /* x3f_dump.c */; };
+		B65E05401E6A813900DE6357 /* FileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E053F1E6A813900DE6357 /* FileListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +34,7 @@
 /* Begin PBXFileReference section */
 		B65E044C1E6A4F0A00DE6357 /* x3f_mac_viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = x3f_mac_viewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65E044F1E6A4F0A00DE6357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B65E04511E6A4F0A00DE6357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B65E04511E6A4F0A00DE6357 /* ThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailViewController.swift; sourceTree = "<group>"; };
 		B65E04531E6A4F0A00DE6357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B65E04561E6A4F0A00DE6357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B65E04581E6A4F0A00DE6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		B65E04FB1E6A6A1A00DE6357 /* x3f_printf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x3f_printf.h; path = ../../src/x3f_printf.h; sourceTree = "<group>"; };
 		B65E053C1E6A6C9600DE6357 /* x3f_dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x3f_dump.c; path = ../../src/x3f_dump.c; sourceTree = "<group>"; };
 		B65E053D1E6A6C9600DE6357 /* x3f_dump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x3f_dump.h; path = ../../src/x3f_dump.h; sourceTree = "<group>"; };
+		B65E053F1E6A813900DE6357 /* FileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 				B65E04FD1E6A6ACB00DE6357 /* dummy */,
 				B65E04701E6A61C600DE6357 /* src */,
 				B65E044F1E6A4F0A00DE6357 /* AppDelegate.swift */,
-				B65E04511E6A4F0A00DE6357 /* ViewController.swift */,
+				B65E04511E6A4F0A00DE6357 /* ThumbnailViewController.swift */,
+				B65E053F1E6A813900DE6357 /* FileListViewController.swift */,
 				B65E04531E6A4F0A00DE6357 /* Assets.xcassets */,
 				B65E04551E6A4F0A00DE6357 /* Main.storyboard */,
 				B65E04581E6A4F0A00DE6357 /* Info.plist */,
@@ -253,8 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65E04FC1E6A6A1A00DE6357 /* x3f_printf.c in Sources */,
+				B65E05401E6A813900DE6357 /* FileListViewController.swift in Sources */,
 				B65E04A41E6A61D900DE6357 /* x3f_io.c in Sources */,
-				B65E04521E6A4F0A00DE6357 /* ViewController.swift in Sources */,
+				B65E04521E6A4F0A00DE6357 /* ThumbnailViewController.swift in Sources */,
 				B65E053E1E6A6C9600DE6357 /* x3f_dump.c in Sources */,
 				B65E04501E6A4F0A00DE6357 /* AppDelegate.swift in Sources */,
 				B65E04C01E6A678B00DE6357 /* yas_x3f_utils.m in Sources */,

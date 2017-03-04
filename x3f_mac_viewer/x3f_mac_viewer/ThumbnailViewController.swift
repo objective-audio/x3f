@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ThumbnailViewController: NSViewController {
     @IBOutlet weak var imageView: NSImageView!
 
     override func viewDidLoad() {
