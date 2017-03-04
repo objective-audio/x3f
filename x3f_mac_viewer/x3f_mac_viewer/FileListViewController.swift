@@ -11,5 +11,16 @@ import Cocoa
 class FileListViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     
+    var data: Data?
     
+    override var representedObject: Any? {
+        didSet {
+            self.data = representedObject as? Data
+            self.updateTableView()
+        }
+    }
+    
+    func updateTableView() {
+        
+    }
 }

@@ -10,6 +10,8 @@ import Cocoa
 
 class ThumbnailViewController: NSViewController {
     @IBOutlet weak var imageView: NSImageView!
+    
+    var data: Data?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,7 @@ class ThumbnailViewController: NSViewController {
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            self.data = representedObject as? Data
         }
     }
     
@@ -31,11 +33,15 @@ class ThumbnailViewController: NSViewController {
         openPanel.allowsMultipleSelection = false;
         
         if openPanel.runModal() == NSFileHandlingPanelOKButton {
-            guard let url = openPanel.url else {
-                return
-            }
+            self.data?.selectedFileUrl = openPanel.url
             
-            let urlString = url.absoluteString
+            self.updateImage()
+        }
+    }
+    
+    func updateImage() {
+        if let fileURL = self.data?.selectedFileUrl {
+            let urlString = fileURL.absoluteString
             let urlSubstring = urlString.substring(from: urlString.index(urlString.startIndex, offsetBy: 7))
             let path = urlSubstring.cString(using: .utf8)
             
