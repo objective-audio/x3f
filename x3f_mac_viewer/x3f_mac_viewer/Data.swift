@@ -9,6 +9,36 @@
 import Foundation
 
 class Data {
-    var directoryUrl: URL?
-    var selectedFileUrl: URL?
+    var selectedDirectoryUrl: URL? {
+        didSet {
+            if let url = selectedDirectoryUrl {
+                let fileManager = FileManager.default
+                let urls = try! fileManager.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+                
+                if urls.count > 0 {
+                    for url in urls {
+                        self.selectedFileUrl = url
+                        break
+                    }
+                } else {
+                    self.selectedFileUrl = nil
+                }
+            }
+            
+            if let handler = directoryChangeHandler {
+                handler(selectedDirectoryUrl)
+            }
+        }
+    }
+    
+    var selectedFileUrl: URL? {
+        didSet {
+            if let handler = self.fileChangeHandler {
+                handler(selectedFileUrl)
+            }
+        }
+    }
+    
+    var directoryChangeHandler: ((URL?) -> Void)?
+    var fileChangeHandler: ((URL?) -> Void)?
 }
