@@ -22,10 +22,6 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-    @IBAction func open_(sender: AnyObject) {
-        self.imageView.image = NSImage(named: "sample")
-    }
     
     @IBAction func open(sender: AnyObject) {
         let openPanel = NSOpenPanel()
