@@ -18,6 +18,12 @@ class ThumbnailViewController: NSViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        self.openDialog()
+    }
 
     override var representedObject: Any? {
         didSet {
@@ -26,6 +32,10 @@ class ThumbnailViewController: NSViewController {
     }
     
     @IBAction func open(sender: AnyObject) {
+        self.openDialog()
+    }
+    
+    func openDialog() {
         let openPanel = NSOpenPanel()
         openPanel.allowedFileTypes = ["x3f"]
         openPanel.canChooseDirectories = false;
