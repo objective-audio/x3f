@@ -42,7 +42,19 @@ class Data {
     func fileURLs() -> [URL] {
         if let directoryUrl = self.selectedDirectoryUrl {
             let fileManager = FileManager.default
-            return try! fileManager.contentsOfDirectory(at: directoryUrl, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            
+            do {
+                let fileURLs = try fileManager.contentsOfDirectory(at: directoryUrl, includingPropertiesForKeys: nil, options: [.skipsHiddenFiles, .skipsPackageDescendants, . skipsSubdirectoryDescendants])
+                
+                return fileURLs.filter( { (url: URL) in
+                    var isDirectory : ObjCBool = false
+                    if fileManager.fileExists(atPath: url.path, isDirectory:&isDirectory) {
+                        return !isDirectory.boolValue
+                    }
+                    return false
+                });
+            } catch {
+            }
         }
         return []
     }
