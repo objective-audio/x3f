@@ -35,6 +35,9 @@ extension FileListViewController: NSTableViewDataSource {
     }
     
     public func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        return "\(row)"
+        if row < self.fileURLs.count {
+            return self.fileURLs[row].lastPathComponent
+        }
+        return "out of range"
     }
 }
