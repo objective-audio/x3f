@@ -28,6 +28,9 @@ class ThumbnailViewController: NSViewController {
     override var representedObject: Any? {
         didSet {
             self.data = representedObject as? Data
+            self.data?.fileChangeHandler = { [unowned self] (_ :URL?) in
+                self.updateImage()
+            }
         }
     }
     
@@ -38,14 +41,12 @@ class ThumbnailViewController: NSViewController {
     func openDialog() {
         let openPanel = NSOpenPanel()
         openPanel.allowedFileTypes = ["x3f"]
-        openPanel.canChooseDirectories = false;
-        openPanel.canChooseFiles = true;
+        openPanel.canChooseDirectories = true;
+        openPanel.canChooseFiles = false;
         openPanel.allowsMultipleSelection = false;
         
         if openPanel.runModal() == NSFileHandlingPanelOKButton {
-            self.data?.selectedFileUrl = openPanel.url
-            
-            self.updateImage()
+            self.data?.selectedDirectoryUrl = openPanel.url
         }
     }
     
