@@ -26,7 +26,15 @@ class FileListViewController: NSViewController {
 }
 
 extension FileListViewController: NSTableViewDelegate {
-    
+    public func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        if row < self.fileURLs.count {
+            self.data?.selectedFileUrl = self.fileURLs[row]
+        } else {
+            self.data?.selectedFileUrl = nil
+        }
+        
+        return true
+    }
 }
 
 extension FileListViewController: NSTableViewDataSource {
