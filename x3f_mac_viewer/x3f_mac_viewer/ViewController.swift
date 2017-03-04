@@ -35,7 +35,9 @@ class ViewController: NSViewController {
         openPanel.allowsMultipleSelection = false;
         
         if openPanel.runModal() == NSFileHandlingPanelOKButton {
-            print("open:\(openPanel.url)")
+            if let url = openPanel.url {
+                print("open:\(url)")
+            }
         }
     }
 }
