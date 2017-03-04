@@ -718,10 +718,10 @@
             </objects>
             <point key="canvasLocation" x="1283" y="438"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="zta-wY-Qjw">
             <objects>
-                <splitViewController id="Fea-y5-siD" sceneMemberID="viewController">
+                <splitViewController id="Fea-y5-siD" customClass="RootViewController" customModule="x3f_mac_viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="Oud-zb-XgF"/>
                         <splitViewItem id="kAe-Kf-9is"/>

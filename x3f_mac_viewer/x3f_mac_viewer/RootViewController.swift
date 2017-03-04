@@ -9,7 +9,13 @@
 import Cocoa
 
 class RootViewController : NSSplitViewController {
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+    var data: Data = Data()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        for item in self.splitViewItems {
+            item.viewController.representedObject = self.data
+        }
     }
 }
