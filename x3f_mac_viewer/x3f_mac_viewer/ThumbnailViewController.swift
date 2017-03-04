@@ -40,7 +40,6 @@ class ThumbnailViewController: NSViewController {
     
     func openDialog() {
         let openPanel = NSOpenPanel()
-        openPanel.allowedFileTypes = ["x3f"]
         openPanel.canChooseDirectories = true;
         openPanel.canChooseFiles = false;
         openPanel.allowsMultipleSelection = false;
@@ -52,9 +51,7 @@ class ThumbnailViewController: NSViewController {
     
     func updateImage() {
         if let fileURL = self.data?.selectedFileUrl {
-            let urlString = fileURL.absoluteString
-            let urlSubstring = urlString.substring(from: urlString.index(urlString.startIndex, offsetBy: 7))
-            let path = urlSubstring.cString(using: .utf8)
+            let path = fileURL.path.cString(using: .utf8)
             
             if let jpgData = load_jpg(path) {
                 self.imageView.image = NSImage(data: jpgData)
