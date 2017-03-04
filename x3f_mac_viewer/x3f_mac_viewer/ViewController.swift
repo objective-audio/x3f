@@ -24,7 +24,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func open(sender: AnyObject) {
-        print("open clicked")
+        self.imageView.image = NSImage(named: "sample")
     }
 }
 

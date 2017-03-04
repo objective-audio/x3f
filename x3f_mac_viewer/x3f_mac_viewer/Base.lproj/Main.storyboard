@@ -697,8 +697,8 @@
                                 </connections>
                             </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ou-bj-Ab1">
-                                <rect key="frame" x="20" y="61" width="440" height="189"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bUh-x4-gOq"/>
+                                <rect key="frame" x="17" y="58" width="446" height="195"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="bUh-x4-gOq"/>
                             </imageView>
                         </subviews>
                         <constraints>
