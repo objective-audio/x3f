@@ -683,7 +683,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ThumbnailViewController" customModule="x3f_mac_viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="489"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="51V-lT-4p0">
@@ -697,7 +697,7 @@
                                 </connections>
                             </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ou-bj-Ab1">
-                                <rect key="frame" x="17" y="58" width="446" height="195"/>
+                                <rect key="frame" x="17" y="58" width="446" height="414"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="bUh-x4-gOq"/>
                             </imageView>
                         </subviews>
@@ -716,7 +716,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1283" y="438"/>
+            <point key="canvasLocation" x="1814" y="535"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="zta-wY-Qjw">
@@ -744,23 +744,23 @@
             <objects>
                 <viewController id="8U5-cl-kvw" customClass="FileListViewController" customModule="x3f_mac_viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="O4J-CP-IAE">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="489"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faJ-KK-M5f">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="489"/>
                                 <clipView key="contentView" id="qBj-kZ-COX">
-                                    <rect key="frame" x="1" y="0.0" width="448" height="299"/>
+                                    <rect key="frame" x="1" y="0.0" width="448" height="488"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="47b-SO-u45" id="maF-9s-sHg">
-                                            <rect key="frame" x="0.0" y="0.0" width="450.5" height="276"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="465"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="447.5" minWidth="40" maxWidth="1000" id="Xq2-bU-075">
+                                                <tableColumn width="445" minWidth="40" maxWidth="1000" id="Xq2-bU-075">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -781,7 +781,7 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.59999999999999998" horizontal="YES" id="xIu-2h-kjh">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.59999999999999998" horizontal="YES" id="xIu-2h-kjh">
                                     <rect key="frame" x="1" y="283" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -790,7 +790,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="47b-SO-u45">
-                                    <rect key="frame" x="0.0" y="0.0" width="450.5" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="448" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -808,7 +808,7 @@
                 </viewController>
                 <customObject id="zJk-LZ-4dC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="780"/>
+            <point key="canvasLocation" x="1306" y="534.5"/>
         </scene>
     </scenes>
 </document>
